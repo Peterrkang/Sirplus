@@ -31,9 +31,9 @@ Rails.application.routes.draw do
   #   end
 
 
-  root 'static#index'
+  root 'static_pages#index'
 
-  get 'home' => 'static#index'
+  get 'home' => 'static_pages#index'
 
   resources :providers
   resources :shelters
