@@ -1,4 +1,7 @@
 class SheltersController < ApplicationController
+
+  before_action :logged_in_as_correct_user, only: [:delete, :update, :edit]
+
   def show
   end
 
