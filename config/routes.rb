@@ -26,6 +26,15 @@ Rails.application.routes.draw do
   #     end
   #   end
 
+
+  root 'static#index'
+
+  get 'home' => 'static#index'
+
+  resources :providers
+  resources :shelters
+  resources :foods
+
   # Example resource route with sub-resources:
   #   resources :products do
   #     resources :comments, :sales
