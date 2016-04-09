@@ -1,2 +1,20 @@
-<h1>Foods#new</h1>
-<p>Find me in app/views/foods/new.html.erb</p>
+<h1>NEW FOOD</h1>
+<%= form_for @food do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+
+  <p>How long is food available?</p>
+  <br>
+  Hours: <input name="hours" type="number" min="0" max="24"></input>
+  <br>
+  Minutes: <input name="minutes" type="number" min="5" step="5" max="55"></input>
+  <br>
+  <%= f.submit %>
+<% end %>

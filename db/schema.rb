@@ -20,8 +20,12 @@ ActiveRecord::Schema.define(version: 20160409181744) do
     t.integer  "provider_id"
     t.text     "description"
     t.string   "title"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.time     "expiration_time"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "providers", force: :cascade do |t|
