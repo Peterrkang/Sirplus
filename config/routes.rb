@@ -1,6 +1,38 @@
 Rails.application.routes.draw do
 
 
+  get 'foods/show'
+
+  get 'foods/index'
+
+  get 'foods/new'
+
+  get 'foods/create'
+
+  get 'foods/edit'
+
+  get 'foods/update'
+
+  get 'foods/delete'
+
+  get 'foods/destroy'
+
+  get 'food/show'
+
+  get 'food/index'
+
+  get 'food/create'
+
+  get 'food/update'
+
+  get 'food/new'
+
+  get 'food/edit'
+
+  get 'food/delete'
+
+  get 'food/destroy'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
