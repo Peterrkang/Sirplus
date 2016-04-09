@@ -1,49 +1,5 @@
 Rails.application.routes.draw do
-  get 'static_pages/show'
 
-  get 'static_pages/index'
-
-  get 'shelters/show'
-
-  get 'shelters/index'
-
-  get 'shelters/create'
-
-  get 'shelters/delete'
-
-  get 'shelters/update'
-
-  get 'shelters/edit'
-
-  get 'shelters/new'
-
-  get 'providers/show'
-
-  get 'providers/index'
-
-  get 'providers/create'
-
-  get 'providers/delete'
-
-  get 'providers/update'
-
-  get 'providers/edit'
-
-  get 'providers/new'
-
-  get 'provider/show'
-
-  get 'provider/index'
-
-  get 'provider/create'
-
-  get 'provider/delete'
-
-  get 'provider/update'
-
-  get 'provider/edit'
-
-  get 'provider/new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
