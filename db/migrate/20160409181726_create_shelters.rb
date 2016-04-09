@@ -5,6 +5,7 @@ class CreateShelters < ActiveRecord::Migration
       t.string :address
       t.string :phone_number
       t.string :email
+      t.string :password_digest
 
       t.timestamps null: false
     end

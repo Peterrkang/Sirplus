@@ -38,6 +38,7 @@ Rails.application.routes.draw do
   resources :providers
   resources :shelters
   resources :foods
+  resources :sessions
 
   # Example resource route with sub-resources:
   #   resources :products do
