@@ -1,10 +1,11 @@
-class CreateShelters < ActiveRecord::Migration
+class CreateUsers < ActiveRecord::Migration
   def change
-    create_table :shelters do |t|
+    create_table :users do |t|
+      t.string :type, null: false
+      t.string :email
       t.string :name
       t.string :address
       t.string :phone
-      t.string :email
       t.string :password_digest
 
       t.timestamps null: false
