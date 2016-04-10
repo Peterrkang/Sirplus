@@ -13,7 +13,7 @@ class ProvidersController < ApplicationController
       @provider.save
       redirect_to root_url
     else
-      flash[:error] = @provider.errors.full_messages
+      flash[:error] = "Something went wrong"
       render 'new'
     end
   end
