@@ -2,11 +2,21 @@
 <html>
 <head>
   <title>SirPlus</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
+<div id="space"></div>
+<section id="header">
+<a href="#"><%= image_tag("smallicon.png", height:'50') %></a>
+  <ul class="nav nav-pills">
+    <li role="presentation"><a href="#">Sign Up</a></li>
+    <li role="presentation"><a href="#">Log In</a></li>
+  </ul>
+</section>
 
 <%= yield %>
 
