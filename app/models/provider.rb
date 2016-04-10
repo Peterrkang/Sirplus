@@ -1,4 +1,5 @@
 class Provider < ActiveRecord::Base
+  has_many :foods
 
 
   before_save {self.email.downcase!}
