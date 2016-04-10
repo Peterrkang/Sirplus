@@ -1,7 +1,5 @@
 class SessionsController < ApplicationController
 
-  # before_action :logged_in_as_correct_user
-
   def new
   end
 
