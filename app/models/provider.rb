@@ -1,5 +1,8 @@
 class Provider < ActiveRecord::Base
+  has_many :foods
 
+
+  before_save {self.email.downcase!}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 
   validates :email, presence: true, length:     { maximum: 150 },

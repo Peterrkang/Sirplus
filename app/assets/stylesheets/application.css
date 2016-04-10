@@ -6,7 +6,7 @@
  * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
+ * compiled file so the styles yo5u add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
@@ -15,6 +15,47 @@
  */
 
 body {
-  margin: 0;
-  background-color: brown;
+  background: url(homebg.png);
+}
+
+.bg-image {
+  background-color: blue;
+}
+
+#left, #right {
+  display: inline-block;
+}
+
+#pictures {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 500px;
+  margin-top: -250px;
+  margin-left: -500px;
+}
+
+#header {
+  background-color: #000;
+}
+
+.nav-pills {
+  float: right;
+  padding-right: 30px;
+}
+
+.nav-pills a {
+  color: gray;
+  font-size: 20px;
+}
+
+.nav-pills a:hover {
+  color: #00cc99;
+}
+
+#space {
+  width: 100%;
+  height: 3%;
+>>>>>>> 9a9844139a9963aca3da7bcbb83da26da6965310
 }
