@@ -30,16 +30,7 @@
         <h4 class="modal-title" id="exampleModalLabel">Login</h4>
       </div>
       <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="recipient-name" class="control-label">Email</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="control-label">Password:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
+      <%= render :partial => 'sessions/form.html.erb' %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
