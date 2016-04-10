@@ -18,6 +18,10 @@ body {
   background: url(homebg.png);
 }
 
+.bg-image {
+  background-color: blue;
+}
+
 #left, #right {
   display: inline-block;
 }
