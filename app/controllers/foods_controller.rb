@@ -4,6 +4,22 @@ class FoodsController < ApplicationController
   end
 
   def index
+    if request.xhr?
+      # if user is shelter then all render. This might not be working
+      food_hash = []
+      Food.all.each_with_index do |food, i|
+        food_hash[i] = {
+          :"title" => food.title,
+          :"description" => food.description,
+          :"address" => food.address,
+          :"latitude" => food.latitude,
+          :"longitude" => food.longitude,
+          :"expiration_time" => food.expiration_time
+        }
+      end
+      render json: food_hash
+    else
+    end
   end
 
   def new
@@ -13,8 +29,6 @@ class FoodsController < ApplicationController
   def create
     food = Food.create(food_params)
     food.update(expiration_time: Food.get_expiration_time(params[:hours], params[:minutes]))
-    coordinates = food.get_coordinates
-    food.update(longitude: coordinates[0], latitude: coordinates[1])
     redirect_to foods_path
   end
 
