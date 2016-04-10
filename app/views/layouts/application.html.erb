@@ -15,12 +15,16 @@
 <body>
 <div id="space"></div>
 <section id="header">
-<a href="#"><%= image_tag("smallicon.png", height:'50') %></a>
+<a href=<%= root_url %>><%= image_tag("smallicon.png", height:'50') %></a>
+
   <ul class="nav nav-pills">
 
-    <li role="presentation" data-toggle="modal" data-target="#myModal"><a href="#">Sign Up</a></li>
+<% if current_user %>
+    <li role="presentation" data-toggle="modal" data-target="#myModal"><%= link_to "log out", session_path(current_user.id), :method=>:delete %></li>
+<% else %>
+    <li role="presentation" data-toggle="modal" data-target="#myModal"><a href="localhost:3000/providers/new">Sign Up</a></li>
     <li role="presentation" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><a href="#">Log In</a></li>
-
+<% end %>
   </ul>
 </section>
 
