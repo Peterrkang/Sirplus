@@ -17,6 +17,7 @@
 
 $(document).on('read page:load', function(){
   // turnPurple();
+
 })
 
 // var turnPurple = function(){
