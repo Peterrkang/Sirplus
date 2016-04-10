@@ -1,33 +1,70 @@
 <div id="space"></div>
+<script>
+$('body').mouseover(function(){
+$('#right-absolute').fadeOut('xslow', function(){
 
+});
+});
+
+$('li').mouseover(function(){
+    $('#right').fadeOut('xslow', function(){
+
+    });
+});
+$('li').mouseover(function(){
+    $('#right-absolute').fadeIn('xslow', function(){
+
+    });
+});
+$('li').mouseout(function(){
+    $('#right').fadeIn('xslow', function(){
+
+    });
+});
+
+
+$('li').mouseout(function(){
+    $('#right').fadeIn('xslow', function(){
+
+    });
+});
+
+</script>
 <section id="pictures">
  <span id="left"><%= image_tag("sirplus.png", height:'500') %></span>
  <span id="right"><%= image_tag("GentlemanSilhouette4.png", height: '500') %></span>
+ <span id="right-absolute"><%= image_tag("pinkdude.png", height: '500') %></span>
 </section>
+
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-footer">
+        <h4 class="modal-title" id="myModalLabel">I am a...</h4>
+        <a href="localhost:3000/providers/new/"><button id="provider" type="button" class="btn btn-default" data-dismiss="modal">Provider</button></a>
+        <button type="button" class="btn btn-primary">Shelter</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+        <h4 class="modal-title" id="exampleModalLabel">Login</h4>
       </div>
       <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label for="recipient-name" class="control-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="form-group">
-            <label for="message-text" class="control-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
-        </form>
+
+      <%= render :partial => 'sessions/form.html.erb' %>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
+
     </div>
   </div>
 </div>

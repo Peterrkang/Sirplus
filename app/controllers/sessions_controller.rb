@@ -1,15 +1,14 @@
 class SessionsController < ApplicationController
 
-  before_action :logged_in_as_correct_user
-
   def new
   end
 
   def create
-    @provider = Provider.find_by(email: params[:session][:email].downcase)
+    @user = User.find_by(email: params[:session][:email].downcase)
 
-    if @provider && @provider.authenticate(params[:session][:password])
-        log_in @provider
+    if @user && @user.authenticate(params[:session][:password])
+      log_in @user
+      redirect_to foods_url
     else
       flash.now[:danger] = 'Wrong email address or password.'
       render 'new'
@@ -17,10 +16,15 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    log_out
-    redirect_to new_session_path
+    session.delete(:user_id)
+    redirect_to root_url
   end
 
+
+  private
+  def log_in(user)
+    session[:user_id] = user.id
+  end
 
 
 end
