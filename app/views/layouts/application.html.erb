@@ -19,12 +19,14 @@
 
   <ul class="nav nav-pills">
 
+
 <% if current_user %>
     <li role="presentation" data-toggle="modal" data-target="#myModal"><%= link_to "log out", session_path(current_user.id), :method=>:delete %></li>
 <% else %>
     <li role="presentation" data-toggle="modal" data-target="#myModal"><a href="localhost:3000/providers/new">Sign Up</a></li>
     <li role="presentation" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo"><a href="#">Log In</a></li>
 <% end %>
+
   </ul>
 </section>
 
