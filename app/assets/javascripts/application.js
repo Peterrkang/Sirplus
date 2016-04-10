@@ -62,7 +62,6 @@ var displayEvents = function(events){
   var url = $(this).attr("href");
   $.get(url).done(function(response){
     setMarkers(response);
-    debugger
 
     var eventsHTML = createEventsHTML(response);
     $("#googleMap").append(eventsHTML);
@@ -72,7 +71,6 @@ var displayEvents = function(events){
 var setMarkers = function(events){
   for (var i = 0; i < events.length; i++){
     var event = events[i];
-    debugger
     var marker = new google.maps.Marker({
       position: {lat: event.latitude, lng: event.longitude},
       title: event.title,
