@@ -38,8 +38,12 @@ body {
 
 #header {
   background-color: #000;
+  box-shadow: 2px 2px 2px #ff3366;
 }
 
+#header:hover {
+  box-shadow: 2px 2px 2px #ff0040;
+}
 .nav-pills {
   float: right;
   padding-right: 30px;
@@ -58,3 +62,40 @@ body {
   width: 100%;
   height: 3%;
 }
+
+#provider {
+  float: left;
+}
+
+
+.btn-default, .btn-primary {
+  background-color: #00cc99;
+  color: white;
+  border: 1px solid #e0e0d1;
+  padding-left: 115px;
+  padding-right: 115px;
+}
+
+.btn-default {
+  background-color: #ff3366;
+}
+.btn-default:hover, .btn-primary:hover {
+  background-color: #e0e0d1;
+  color: black;
+  border: 1px solid #cbcbb3;
+}
+.btn-default:hover {
+background-color: #1f1f2e;
+color: white;
+}
+
+.modal-footer {
+  background-color: white;
+  border-radius: 7px;
+}
+
+h4 {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
