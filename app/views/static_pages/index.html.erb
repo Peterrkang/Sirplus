@@ -1,8 +1,39 @@
 <div id="space"></div>
+<script>
+$('body').mouseover(function(){
+$('#right-absolute').fadeOut('xslow', function(){
 
+});
+});
+
+$('li').mouseover(function(){
+    $('#right').fadeOut('xslow', function(){
+
+    });
+});
+$('li').mouseover(function(){
+    $('#right-absolute').fadeIn('xslow', function(){
+
+    });
+});
+$('li').mouseout(function(){
+    $('#right').fadeIn('xslow', function(){
+
+    });
+});
+
+
+$('li').mouseout(function(){
+    $('#right').fadeIn('xslow', function(){
+
+    });
+});
+
+</script>
 <section id="pictures">
  <span id="left"><%= image_tag("sirplus.png", height:'500') %></span>
  <span id="right"><%= image_tag("GentlemanSilhouette4.png", height: '500') %></span>
+ <span id="right-absolute"><%= image_tag("pinkdude.png", height: '500') %></span>
 </section>
 
 

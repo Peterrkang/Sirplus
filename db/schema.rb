@@ -20,12 +20,8 @@ ActiveRecord::Schema.define(version: 20160410012006) do
     t.integer  "provider_id"
     t.text     "description"
     t.string   "title"
-    t.string   "address"
-    t.float    "latitude"
-    t.float    "longitude"
-    t.time     "expiration_time"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "providers", force: :cascade do |t|
@@ -33,19 +29,17 @@ ActiveRecord::Schema.define(version: 20160410012006) do
     t.string   "name"
     t.string   "address"
     t.string   "phone"
-    t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "shelters", force: :cascade do |t|
     t.string   "name"
     t.string   "address"
-    t.string   "phone"
+    t.string   "phone_number"
     t.string   "email"
-    t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|
