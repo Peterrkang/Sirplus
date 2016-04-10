@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
     if @user && @user.authenticate(params[:session][:password])
       log_in @user
-      redirect_to root_url
+      redirect_to foods_url
     else
       flash.now[:danger] = 'Wrong email address or password.'
       render 'new'
@@ -16,8 +16,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    log_out
-    redirect_to new_session_path
+    session.delete(:user_id)
+    redirect_to root_url
   end
 
 
@@ -26,8 +26,5 @@ class SessionsController < ApplicationController
     session[:user_id] = user.id
   end
 
-  def log_out
-    session[:user_id] = nil
-  end
 
 end
